@@ -88,9 +88,7 @@ table {
 	overflow: hidden;
 }
 
-html{
-	width: 100%;
-}
+
 /* Heading Styles */
 header{
 	background: linear-gradient(to bottom, var(--teal) 0%, var(--white) 100%);
@@ -100,6 +98,8 @@ header{
 body{
 	line-height: 1.5;
 	width: 100%;
+	margin: 0 auto;
+	display: block;
 }
 
 /* Text Styles */
