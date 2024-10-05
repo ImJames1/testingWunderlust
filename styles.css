@@ -231,6 +231,11 @@ label, legend{
 	font-weight: bold;
 }
 
+.radio-input{
+	color: var(--purple);
+	
+	}
+
 
 ::placeholder{
 	color: var(--black);
