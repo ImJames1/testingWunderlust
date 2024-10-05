@@ -88,7 +88,9 @@ table {
 	overflow: hidden;
 }
 
-
+html{
+	width: 100%;
+}
 /* Heading Styles */
 header{
 	background: linear-gradient(to bottom, var(--teal) 0%, var(--white) 100%);
