@@ -250,7 +250,7 @@ header p{
 
 
 h1, h2, h3, p, form{
-	padding-left: 2.5rem;
+	/* padding-left: 2.5rem; */
 }
 
 #menu-toggle label{
