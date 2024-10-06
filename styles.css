@@ -88,10 +88,17 @@ table {
 	overflow: hidden;
 }
 
-
 /* Heading Styles */
 header{
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	background: linear-gradient(to bottom, var(--teal) 0%, var(--white) 100%);
+}
+
+header p{
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
 }
 
 
@@ -102,21 +109,132 @@ body{
 	display: block;
 }
 
+
+/* Navigation Styles */
+/* #menu{
+	grid-column: 2 / 3;
+}
+
+#menuToggle {
+	display: block;
+	position: relative;
+	top: 50px;
+	left: 50px;  
+	z-index: 1;  
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	 -ms-user-select: none;
+		 user-select: none;
+  }
+  
+  #menuToggle a {
+	text-decoration: none;
+	color: #232323;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover {
+	color: #4f7794;
+  } */
+  
+  
+  /* The hamburger button hidden inside an input element */
+  /* #menuToggle input {
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -7px;
+	left: -5px;  
+	padding: 0;
+	cursor: pointer;  
+	opacity: 0; 
+	z-index: 2;  
+	-webkit-touch-callout: none;
+  }
+  
+  #menuToggle label {
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 30px;
+  }
+  #menuToggle label span {
+	display: none;
+  }
+  
+  
+  #menuToggle label div:first-child {
+	-webkit-transform-origin: 0% 100%;
+		-ms-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+  }
+  
+  #menuToggle label div:nth-child(2) {
+	  -webkit-transform-origin: 0% 0%;
+		-ms-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+  } */
+  
+  /* 
+   * Change the color of the hamburger when toggled
+   */
+  #menuToggle input:checked + label div {
+	background: #232323;
+  }
+  
+  /*
+   * Use absolute positioning to place the menu off-screen
+   */
+  /* #menu { */
+	/* position: absolute; */
+	/* width: 300px; */
+	/* width: 30%;
+	margin: -100px 0 0 -50px;
+	padding: 50px;
+	padding-top: 125px;
+	background: var(--teal);
+	list-style-type: none; */
+	/* Hide the menu off-screen to the left */
+	/* left: -100%;
+	-webkit-transition: left 0.3s ease;
+	-o-transition: left 0.3s ease;
+	transition: left 0.3s ease; 
+  }
+  
+  #menu li {
+	padding: 10px 0;
+	text-align: center;
+	font-size: 1rem;
+  } */
+  
+  /*
+   * Slide the menu in from left when the input is checked
+   */
+  /* #menuToggle input:checked ~ ul {
+	left: 0;
+  } */
+
+
 /* Text Styles */
 h1, h2, h3{
     font-family: Molle, system-ui;
 } 
 
 h1{
-	font-size: 4em;
+	font-size: 5em;
+	/* grid-column: 1 / -1;
+	grid-row: 2 / 3; */
 }
 
 h2{
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h3{
-	font-size: 2.5em;
+	font-size: 3em;
 }
 
 h4{
@@ -124,6 +242,11 @@ h4{
 	font-size: 2rem;
 	text-transform: uppercase;
 }
+
+p{
+	
+}
+
 
 h1, h2, h3, p, form{
 	padding-left: 2.5rem;
@@ -135,11 +258,18 @@ h1, h2, h3, p, form{
 	/* padding: 1rem .5rem; */
 }
 
+
+
+
+
+
 nav a{
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+
 
 
 h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
@@ -158,6 +288,7 @@ h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
 #plan{
 	margin-top: 1.5rem;
 	background: var(--yellow);
+	padding: 2rem;
 }
 
 
@@ -166,7 +297,7 @@ h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
 	border: 4px solid var(--white);
 	text-align: center;
 	border-radius: 5px;
-	padding: 60px 30px; 
+	padding: 30px 30px; 
 	margin: 1rem;
 }
 
@@ -174,7 +305,10 @@ h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
 	padding-bottom: 1.25rem;
 }
 
+#testimonials{
+	margin: 2rem;
 
+}
 #testimonials div{
 	text-align: center;
 }
@@ -187,19 +321,24 @@ h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
 #testimonials section q{
 	font-size: 1.2rem;
 	font-style: italic;
+	/* quotes: '"' '"'; */
 }
 
 
 #about{
 	background: var(--blue);
+	padding: 3rem;
+	width: 100%;
 }
 
 #about div{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	/* gap: 1rem; */
+	text-align: center;
+	
+	
 }
-
 
 #about h4{
 	text-transform: uppercase;
@@ -207,13 +346,15 @@ h4, p, q, small, nav, button, form, ::placeholder, option, #mySubmit, footer{
 
 #about p{
 	font-size: 1.5rem;
+	text-align: center;
 }
 
-#about section{
-	text-align: center;
-	/* display: flex;
-	flex-direction: column;
-	align-items: center; */
+#about section:first-of-type p{
+	/* max-width: 14ch; change */
+}
+
+#contact{
+	margin: 1rem;
 }
 
 
@@ -225,16 +366,11 @@ h3 span{
 	font-style: italic;
 }
 label, legend{
-	display: block;
+	/* display: block; */
 	font-size: large;
 	text-transform: uppercase;
 	font-weight: bold;
 }
-
-.radio-input{
-	color: var(--purple);
-	
-	}
 
 
 ::placeholder{
@@ -242,11 +378,55 @@ label, legend{
 	font-size: 1rem;
 }
 
+
+
 input{
 	border: solid var(--purple);
 	width: 90%;
-	padding: 1rem;
+	padding: 1.5rem;
+	margin-bottom: 1rem;;
 }
+
+/* .input {
+	font-size: 16px;
+	font-size: max(16px, 1em);
+	font-family: inherit;
+	padding: 1rem 1rem;
+	background-color: #fff;
+	border: 2px solid var(--input-border);
+	border-radius: 4px;
+} */
+
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: var(--purple);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+	content: "";
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 2em 2em var(--purple);
+  }
+  
+input[type="radio"]:checked::before {
+	transform: scale(1);
+  }
+
+
 
 .radio-label{
 	font-weight: normal;
@@ -257,63 +437,34 @@ input{
 	color: var(--purple);
 }
 
-.custom-select #destination, .custom-select #travelTime {
+#destination, #travelTime{
 	appearance: none;
 	background-color: transparent;
-	border: solid var(--purple);;
-	/* padding: 0 1em 0 0; */
-	margin-bottom: 1rem;
+	border: none;
+	margin: 0;
 	width: 90%;
 	font-family: inherit;
 	font-size: inherit;
-	
-  }
-
-  /* Footer Styles */
-  footer{
-	background: var(--light-gray);
-	display: flex;
-	flex-direction: column;
+	outline: none;
+	border: solid var(--purple);
+	padding: 1.5rem;
+	display: grid;
+	grid-template-areas: "select";
+	grid-area: select;
 	align-items: center;
-  }
+}
 
-  footer p, footer a{
-	text-decoration: none;
-	color: var(--black);
-  }
-
-  footer p{
-	margin-bottom: .5rem;
-  }
-
-  /* .custom-select #destination::after, .custom-select #travelTime::after{
+#destination::after, #travelTime::after {
 	content: "";
 	width: 0.8em;
 	height: 0.5em;
-	/* background-color: var(--select-arrow); */
-	/* clip-path: polygon(100% 0%, 0 0%, 50% 100%); */
-  /* .custom-select #destination {
-	width: 100%;
-	min-width: 15ch;
-	max-width: 30ch;
-	border: 1px solid var(--select-border);
-	border-radius: 0.25em;
-	padding: 0.25em 0.5em;
-	font-size: 1.25rem;
-	cursor: pointer;
-	line-height: 1.1;
-	background-color: #fff;
-	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-  } */
-.custom-select #destination:after {
-	content: "";
-	width: 0.8em;
-	height: 0.5em;
-	background-color: var(--select-arrow);
+	background-color: var(--purple);
 	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+	grid-area: select;
+	justify-self: end;
   }
 
-#mySubmit{
+  #mySubmit{
 	background: var(--purple);
 	color: var(--white);
 	font-size: 1.2rem;
@@ -322,10 +473,64 @@ input{
 	width: 95%;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-/* Small Screen Styles
-@media screen and (min-width: 321px){
+
+  /* Footer Styles */
+  /* footer{
+	background: var(--light-gray);
+	display: grid;
+	grid-template-columns: auto-fit;
+	justify-items: center;
+	gap: 1rem;
+	padding: 1rem;
+  } */
+
+  footer{
+	background: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	justify-content: space-evenly;
+  }
+  footer p, footer a{
+	text-decoration: none;
+	color: var(--black);
+  }
+
+
+  /* /* footer{
+	background: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  } */
+
+  /* footer p, footer a{
+	text-decoration: none;
+	color: var(--black);
+  }
+
+
+  footer p{
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+  }
+
+  footer a{
+	margin-top: 1rem;
+  }
+
+a:last-of-type{
+	margin-bottom: 1rem;
+}  */
+
+
+ /* Medium Screen Styles */
+@media screen and (min-width: 500px){
 
 	header{
 		display: grid;
@@ -391,9 +596,19 @@ input{
 	}
 
 	#mySubmit{
-		width: 50%;
-		
+		width: 40%;
 	}
+
+	footer{
+		flex-direction: row;
+	}
+
+	/* footer{
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 0;
+	} */
+
+
 }
 
 /* Large Screen Styles */
@@ -418,4 +633,4 @@ input{
 	}
 
 
-} */
+}
