@@ -333,13 +333,12 @@ q::after{
 #about{
 	background: var(--blue);
 	padding: 3rem;
-	
 }
 
 #about div{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	/* gap: 1rem; */
 	text-align: center;
 	justify-content: center;
 }
